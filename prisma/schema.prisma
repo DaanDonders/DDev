@@ -1,0 +1,24 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Geen 'url' veld meer hier! Dat regelt de config.
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  summary      String
+  description  String
+  technologies String[]
+  githubUrl    String?
+  liveUrl      String?
+  featured     Boolean  @default(false)
+
+  createdAt    DateTime @default(now())
+}
