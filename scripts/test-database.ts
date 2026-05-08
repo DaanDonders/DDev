@@ -1,5 +1,5 @@
 import "dotenv/config";
-import prisma from "../lib/prisma";
+import prisma from "../lib/db/prisma";
 
 async function testDatabase() {
     console.log("🔍 Testing Prisma Postgres connection...\n");

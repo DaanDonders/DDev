@@ -3,15 +3,27 @@ import {
     getFeaturedProjects,
     getProjectBySlug,
 } from "../repositories/projectRepository";
+import { projectSchema } from "@/lib/validators/projectSchema";
+
 
 export async function fetchProjects() {
-    return getAllProjects();
+    const projects = await getAllProjects();
+
+    return projects.map((project) =>
+        projectSchema.parse(project)
+    );
 }
 
 export async function fetchFeaturedProjects() {
-    return getFeaturedProjects();
+    const projects = await getFeaturedProjects();
+
+    return projects.map((project) =>
+        projectSchema.parse(project)
+    );
 }
 
 export async function fetchProject(slug: string) {
-    return getProjectBySlug(slug);
+    const project = await getProjectBySlug(slug);
+
+    return projectSchema.parse(project);
 }

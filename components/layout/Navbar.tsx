@@ -13,15 +13,15 @@ export default function Navbar() {
                 </Link>
 
                 <nav className="flex items-center gap-6 text-sm text-zinc-400">
-                    <Link href="#about" className="transition hover:text-zinc-100">
+                    <Link href="#about" className="transition-colors duration-200 hover:text-zinc-100">
                         About
                     </Link>
 
-                    <Link href="#projects" className="transition hover:text-zinc-100">
+                    <Link href="#projects" className="transition-colors duration-200 hover:text-zinc-100">
                         Projects
                     </Link>
 
-                    <Link href="#contact" className="transition hover:text-zinc-100">
+                    <Link href="#contact" className="transition-colors duration-200 hover:text-zinc-100">
                         Contact
                     </Link>
                 </nav>

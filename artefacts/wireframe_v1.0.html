@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Blueprint</title>
+    <!-- Tailwind CSS CDN voor directe weergave zonder installatie -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Strikte Visuele Regels (Aesthetic Identity) */
+        body { background-color: #0f172a; color: #f8fafc; font-family: ui-sans-serif, system-ui, sans-serif; }
+        
+        /* 2.1 Container Systeem */
+        .container-custom { max-width: 1150px; margin: 0 auto; padding: 0 24px; }
+        @media (max-width: 768px) { .container-custom { padding: 0 16px; } }
+        
+        /* 2.2 Vertical Rhythm & Secties */
+        .section-normal { margin-bottom: 100px; } /* Gemiddelde 80-120px */
+        .hero-gap { margin-bottom: 140px; } /* Gemiddelde 120-160px */
+        
+        /* 4.2 Card Design */
+        .card-surface { 
+            background-color: #1e293b; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 12px;
+            transition: transform 200ms ease, border-color 200ms ease;
+        }
+        .card-surface:hover { 
+            transform: translateY(-4px); 
+            border-color: rgba(255, 255, 255, 0.2); 
+        }
+
+        /* 3.1 & 3.2 Typography Hierarchy */
+        h1 { font-size: clamp(3rem, 8vw, 4rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1.1; }
+        h2 { font-size: clamp(1.75rem, 5vw, 2.25rem); font-weight: 600; }
+        p.body-text { font-size: 1.125rem; line-height: 1.6; max-width: 65ch; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <!-- ① Navbar (fixed, top) -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="container-custom h-16 flex items-center justify-between text-sm font-medium">
+            <div class="text-white font-bold tracking-tight text-lg">LOGO</div>
+            <div class="hidden md:flex gap-8 text-slate-400">
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <div class="opacity-50 hover:opacity-100 transition cursor-pointer">GitHub</div>
+        </div>
+    </nav>
+
+    <!-- ② Hero Section (full viewport height) -->
+    <header class="h-screen flex flex-col justify-center items-center text-center container-custom hero-gap">
+        <h1 class="mb-4">JOUW NAAM</h1>
+        <p class="text-xl md:text-2xl text-slate-300 font-medium mb-2">Creative Developer & Architect</p>
+        <p class="body-text text-slate-500 mb-10">Ik bouw schaalbare digitale systemen met een focus op eenvoud en strikte visuele hiërarchie.</p>
+        
+        <div class="flex gap-4">
+            <button class="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition">View Projects</button>
+            <button class="border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/5 transition">Contact</button>
+        </div>
+    </header>
+
+    <!-- ③ About Section (centered, simple) -->
+    <section id="about" class="container-custom section-normal text-center flex flex-col items-center">
+        <h2 class="mb-6 tracking-tight">About Me</h2>
+        <p class="body-text">
+            Dit is de kern van wat ik doe. Geen overbodige animaties, maar een focus op leesbaarheid en structuur. Elke sectie is ontworpen om precies één vraag te beantwoorden.
+        </p>
+    </section>
+
+    <!-- ④ Featured Projects (Grid 2-col desktop) -->
+    <section id="projects" class="container-custom section-normal">
+        <div class="mb-10">
+            <h2 class="tracking-tight">Featured Projects</h2>
+            <p class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold">Selected work</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project Card -->
+            <div class="card-surface p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-full aspect-video bg-slate-800/50 rounded-lg mb-6 flex items-center justify-center text-slate-600 text-xs">THUMBNAIL</div>
+                    <h3 class="text-xl font-bold mb-2">Project Alpha</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Een diepe duik in systeemarchitectuur en interface design voor complexe data.</p>
+                    <div class="flex gap-2 mb-8">
+                        <span class="text-[11px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-500">React</span>
+                        <span class="text-[11px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-500">Node</span>
+                    </div>
+                </div>
+                <button class="text-sm font-bold text-white border-b border-white/10 w-fit hover:border-white transition">Case Study →</button>
+            </div>
+
+            <!-- Project Card -->
+            <div class="card-surface p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-full aspect-video bg-slate-800/50 rounded-lg mb-6 flex items-center justify-center text-slate-600 text-xs">THUMBNAIL</div>
+                    <h3 class="text-xl font-bold mb-2">Project Beta</h3>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">Responsieve e-commerce oplossing met een focus op conversie en snelheid.</p>
+                    <div class="flex gap-2 mb-8">
+                        <span class="text-[11px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-500">Next.js</span>
+                        <span class="text-[11px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-500">Tailwind</span>
+                    </div>
+                </div>
+                <button class="text-sm font-bold text-white border-b border-white/10 w-fit hover:border-white transition">Case Study →</button>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <button class="text-slate-500 hover:text-white font-bold transition text-sm">VIEW ALL PROJECTS →</button>
+        </div>
+    </section>
+
+    <!-- ⑤ Skills Section (Grouped pills) -->
+    <section class="container-custom section-normal">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-6">Frontend</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">React</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">TypeScript</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">Tailwind</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-6">Backend</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">Node.js</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">Python</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">PostgreSQL</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-6">Tools</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">Docker</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">Git</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-medium">AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑥ Contact Section (Conversion block) -->
+    <section id="contact" class="container-custom section-normal">
+        <div class="bg-slate-900 border border-white/5 p-16 rounded-3xl text-center">
+            <h2 class="mb-4">Let's work together</h2>
+            <p class="text-slate-500 mb-10">Stuur me een bericht voor samenwerkingen of vragen.</p>
+            <a href="mailto:hello@naam.com" class="text-2xl md:text-3xl font-bold border-b-2 border-white/10 hover:border-white transition pb-2">hello@naam.com</a>
+            
+            <div class="flex justify-center gap-8 mt-12 text-sm font-bold text-slate-600">
+                <a href="#" class="hover:text-white transition">GITHUB</a>
+                <a href="#" class="hover:text-white transition">LINKEDIN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑦ Footer -->
+    <footer class="container-custom py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600 uppercase tracking-widest font-bold">
+        <p>© 2024 JOUW NAAM. ALL RIGHTS RESERVED.</p>
+        <div class="flex gap-8 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition">PRIVACY</a>
+            <a href="#" class="hover:text-white transition">TERMS</a>
+        </div>
+    </footer>
+
+</body>
+</html>

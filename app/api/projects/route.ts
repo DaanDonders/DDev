@@ -1,8 +1,20 @@
-import { NextResponse } from "next/server";
 import { fetchProjects } from "@/lib/services/projectService";
 
-export async function GET() {
-    const projects = await fetchProjects();
+import {
+    successResponse,
+    errorResponse,
+} from "@/lib/api/apiResponse";
 
-    return NextResponse.json(projects);
+export async function GET() {
+    try {
+        const projects = await fetchProjects();
+
+        return successResponse(projects);
+    } catch (error) {
+        console.error(error);
+
+        return errorResponse(
+            "Failed to fetch projects"
+        );
+    }
 }
