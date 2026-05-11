@@ -11,8 +11,12 @@ export const projectSchema = z.object({
 
     technologies: z.array(z.string()),
 
-    githubUrl: z.url().optional(),
-    liveUrl: z.url().optional(),
+    role: z.string().optional(),
+
+    features: z.array(z.string()).optional(),
+
+    githubUrl: z.string().url().optional(),
+    liveUrl: z.string().url().optional(),
 
     featured: z.boolean(),
 });

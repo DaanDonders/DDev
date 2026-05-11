@@ -523,10 +523,12 @@ export const ProjectScalarFieldEnum = {
   slug: 'slug',
   summary: 'summary',
   description: 'description',
+  role: 'role',
   technologies: 'technologies',
   githubUrl: 'githubUrl',
   liveUrl: 'liveUrl',
   featured: 'featured',
+  features: 'features',
   createdAt: 'createdAt'
 } as const
 

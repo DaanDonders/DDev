@@ -4,26 +4,39 @@ import Button from "../ui/Button";
 
 export default function HeroSection() {
     return (
-        <Section className="flex min-h-screen items-center">
-            <div className="max-w-3xl space-y-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-zinc-400">
-                    Fullstack Developer
+        <Section spacing="hero">
+            <div className="max-w-4xl space-y-8">
+                <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 font-medium">
+                    Software Developer
                 </p>
 
-                <Heading className="text-6xl leading-tight">
-                    Hi, I&apos;m Daan.
+                <Heading level="h1" className="text-4xl md:text-7xl">
+                    Building software that turns ideas into working systems.
                 </Heading>
 
-                <p className="text-lg leading-8 text-zinc-400">
-                    I build clean, scalable, and modern web applications with a strong
-                    focus on architecture, maintainability, and user experience.
-                </p>
+                <div className="space-y-6">
+                    <p className="max-w-2xl text-lg md:text-xl leading-8 text-zinc-400">
+                        I’m a software developer focused on Java, JavaFX, and full-stack web systems.
+                        I like building applications that are not just functional, but structured,
+                        scalable, and deliberately engineered.
+                    </p>
 
-                <div className="flex gap-4">
-                    <Button href="/projects">View Projects</Button>
+                    <p className="text-sm text-zinc-500 italic">
+                        Currently building and refining my development skills through school projects,
+                        personal experiments, and this portfolio itself.
+                    </p>
+                </div>
 
-                    <Button href="https://github.com">
-                        GitHub
+                <div className="flex flex-wrap gap-4 pt-4">
+                    <Button href="#projects">
+                        View Projects
+                    </Button>
+
+                    <Button
+                        href="#about"
+                        variant="secondary"
+                    >
+                        About Me
                     </Button>
                 </div>
             </div>
