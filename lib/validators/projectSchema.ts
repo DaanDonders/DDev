@@ -9,6 +9,8 @@ export const projectSchema = z.object({
     summary: z.string().min(1),
     description: z.string().min(1),
 
+    thumbnail: z.string().min(1),
+
     technologies: z.array(z.string()),
 
     role: z.string().optional(),

@@ -1,13 +1,16 @@
 'use client';
 
+import Image from "next/image";
 import { useRouter } from "next/navigation"; // Gebruik de router voor navigatie
 import { Project } from "@/lib/types/project";
 
 interface ProjectCardProps {
     project: Project;
+    priority?: boolean;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, priority = false,
+}: ProjectCardProps) {
     const router = useRouter();
 
     // Functie om naar de projectpagina te gaan
@@ -32,8 +35,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         >
             <div className="space-y-4">
                 {/* THUMBNAIL placeholder */}
-                <div className="aspect-video rounded-lg bg-zinc-800/50" />
-
+                <div className="relative aspect-video overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900">
+                    <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        priority={priority}
+                        className="
+            object-cover
+            transition-transform duration-300
+            group-hover:scale-[1.02]
+        "
+                    />
+                </div>
                 <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-zinc-100">
                         {project.title}

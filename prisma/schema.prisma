@@ -17,6 +17,8 @@ model Project {
   summary      String
   description  String
 
+  thumbnail    String
+
   role         String?
 
   technologies String[]

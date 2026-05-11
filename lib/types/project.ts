@@ -6,6 +6,8 @@ export interface Project {
     summary: string;
     description: string;
 
+    thumbnail: string;
+
     technologies: string[];
 
     role?: string;
