@@ -5,7 +5,7 @@ import {
     errorResponse,
 } from "@/lib/api/apiResponse";
 
-export const revalidate = 100; // Revalidate every 100 seconds
+export const revalidate = 86400; // Revalidate every 24 hours
 
 export async function GET() {
     try {

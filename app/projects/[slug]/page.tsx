@@ -9,7 +9,7 @@ interface Props {
     }>;
 }
 
-export const revalidate = 100; // Revalidate every 100 seconds
+export const revalidate = 86400; // Revalidate every 24 hours
 
 // Optioneel: Dynamische metadata voor SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
