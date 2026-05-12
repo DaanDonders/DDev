@@ -5,6 +5,8 @@ import {
     errorResponse,
 } from "@/lib/api/apiResponse";
 
+export const revalidate = 100; // Revalidate every 100 seconds
+
 export async function GET() {
     try {
         const projects = await fetchProjects();
