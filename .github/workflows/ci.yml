@@ -42,6 +42,8 @@ jobs:
         run: npm run test
 
       - name: Run build
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: npm run build
 
       - name: Run Playwright tests
