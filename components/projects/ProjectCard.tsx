@@ -20,6 +20,7 @@ export default function ProjectCard({ project, priority = false,
 
     return (
         <div
+            data-testid="project-card"
             onClick={handleCardClick}
             className="
                 group flex h-full flex-col justify-between
