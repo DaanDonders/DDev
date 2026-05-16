@@ -10,9 +10,7 @@ const adapter = new PrismaNeon({
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-    if (process.env.NODE_ENV === "development") {
-        await prisma.project.deleteMany();
-    }
+    await prisma.project.deleteMany();
 
     await prisma.project.createMany({
         data: projects,
