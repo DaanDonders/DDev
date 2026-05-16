@@ -1,12 +1,19 @@
 import "dotenv/config";
 import { PrismaClient } from "../lib/generated/prisma/client";
 import { PrismaNeon } from "@prisma/adapter-neon";
+import { neonConfig } from "@neondatabase/serverless";
+import ws from "ws";
 import { projects } from "./projects";
 
-const adapter = new PrismaNeon({
-    connectionString: process.env.DATABASE_URL!,
-});
+// Configure Neon to use ws for WebSocket in Node/CI
+neonConfig.webSocketConstructor = ws;
 
+const connectionString = process.env.DATABASE_URL;
+if (!connectionString) {
+    throw new Error("DATABASE_URL is not set");
+}
+
+const adapter = new PrismaNeon({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
@@ -21,7 +28,9 @@ async function main() {
 }
 
 main()
-    .then(() => prisma.$disconnect())
+    .then(async () => {
+        await prisma.$disconnect();
+    })
     .catch(async (e) => {
         console.error(e);
         await prisma.$disconnect();
