@@ -36,7 +36,7 @@ export const projects = [
 
         githubUrl: "https://github.com/DaanDonders/FitnessScheduler",
         liveUrl: "https://github.com/example",
-        featured: true,
+        featured: false,
     },
 
     // -----------------------------
@@ -304,6 +304,6 @@ export const projects = [
         githubUrl: "https://github.com/DaanDonders/DDev",
         liveUrl: "https://github.com/example",
 
-        featured: false
+        featured: true,
     }
 ];

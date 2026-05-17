@@ -7,20 +7,22 @@ interface HeadingProps {
 }
 
 const styles = {
-    h1: "text-5xl md:text-6xl font-bold tracking-tight",
-    h2: "text-3xl md:text-4xl font-semibold tracking-tight",
-    h3: "text-xl font-semibold tracking-tight",
+    h1: "text-5xl md:text-6xl font-bold tracking-tight text-zinc-100",
+    h2: "text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100",
+    h3: "text-xl font-semibold tracking-tight text-zinc-100",
 };
 
 export default function Heading({
     children,
     className = "",
+    level = "h2",
 }: HeadingProps) {
+    const Tag = level;
+    const baseStyle = styles[level];
+
     return (
-        <h2
-            className={`text-3xl font-semibold tracking-tight text-zinc-100 ${className}`}
-        >
+        <Tag className={`${baseStyle} ${className}`}>
             {children}
-        </h2>
+        </Tag>
     );
 }
