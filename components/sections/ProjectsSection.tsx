@@ -10,7 +10,7 @@ export default async function ProjectsSection() {
   const projects = await fetchFeaturedProjects();
 
   return (
-    <Section id="projects">
+    <Section id="projects" importance="primary">
       <div className="space-y-12">
         <div className="space-y-3">
           <Heading level="h2">Featured Projects</Heading>

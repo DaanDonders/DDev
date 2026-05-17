@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Developer Portfolio - Wireframe</title>
+    <!-- Tailwind CSS CDN voor directe weergave zonder installatie -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Strikte Visuele Regels (Aesthetic Identity uit jouw oude template) */
+      body {
+        background-color: #0f172a; /* slate-900 */
+        color: #f8fafc; /* slate-50 */
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+
+      /* Container Systeem */
+      .container-custom {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      @media (max-width: 768px) {
+        .container-custom {
+          padding: 0 16px;
+        }
+      }
+
+      /* Vertical Rhythm & Secties */
+      .section-normal {
+        padding-bottom: 100px;
+        padding-top: 60px;
+      }
+      .hero-gap {
+        min-height: calc(100vh - 4rem);
+      }
+
+      /* Card Design */
+      .card-surface {
+        background-color: #1e293b; /* slate-800 */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        transition:
+          transform 200ms ease,
+          border-color 200ms ease;
+      }
+      .card-surface:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Typography Hierarchy */
+      h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+      }
+      h2 {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        font-weight: 600;
+        tracking-tight: -0.02em;
+      }
+      p.body-text {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        max-width: 65ch;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- ① Navbar (Fixed Header) -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5"
+    >
+      <div
+        class="container-custom h-16 flex items-center justify-between text-sm font-medium"
+      >
+        <div class="text-white font-bold tracking-wider">DEV.PORTFOLIO</div>
+        <div class="hidden md:flex gap-8 text-slate-400">
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#skills" class="hover:text-white transition">Skills</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+        <a href="#" class="opacity-50 hover:opacity-100 transition text-sm"
+          >GitHub</a
+        >
+      </div>
+    </nav>
+
+    <!-- Ruimtecompensatie voor de fixed navbar -->
+    <div class="h-16"></div>
+
+    <main class="container-custom">
+      <!-- ② Hero Section (Aangepast naar jouw nieuwe React-inhoud) -->
+      <header class="flex flex-col justify-center items-start hero-gap py-12">
+        <div class="max-w-4xl space-y-6">
+          <p
+            class="text-sm uppercase tracking-[0.3em] text-slate-400 font-semibold"
+          >
+            Software Developer
+          </p>
+
+          <h1 class="text-white">
+            Building software that turns ideas into working systems.
+          </h1>
+
+          <div class="space-y-4">
+            <p class="body-text text-lg md:text-xl">
+              I’m a software developer focused on Java, JavaFX, and full-stack
+              web systems. I like building applications that are not just
+              functional, but structured, scalable, and deliberately engineered.
+            </p>
+
+            <p class="text-sm text-slate-500 italic">
+              Currently building and refining my development skills through
+              school projects, personal experiments, and this portfolio itself.
+            </p>
+          </div>
+
+          <div class="flex gap-4 pt-4">
+            <a
+              href="#projects"
+              class="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition text-sm"
+            >
+              View Projects
+            </a>
+            <a
+              href="#about"
+              class="border border-white/20 px-8 py-3 rounded-lg font-bold hover:bg-white/5 transition text-sm text-white"
+            >
+              About Me
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ③ About Section (Grid layout hersteld uit je React component) -->
+      <section id="about" class="section-normal border-t border-white/5">
+        <div class="grid gap-12 md:grid-cols-[1fr_2fr] items-start">
+          <div class="space-y-2">
+            <h2 class="text-white">About Me</h2>
+            <p
+              class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold"
+            >
+              My Story & Approach
+            </p>
+          </div>
+
+          <div
+            class="space-y-6 text-slate-400 leading-relaxed text-base md:text-lg"
+          >
+            <p>
+              I’m a software developer with a strong focus on building
+              structured and logical applications, mainly in Java and web
+              technologies. My journey started with small console-based programs
+              where the goal was simple: understand how logic flows and how
+              systems behave when you start adding real structure.
+            </p>
+
+            <p>
+              Over time, I moved toward more complex applications using JavaFX,
+              where I began focusing on user interfaces, state management, and
+              full application flow. This shift helped me understand the gap
+              between
+              <span class="text-slate-200 font-medium">“code that works”</span>
+              and
+              <span class="text-slate-200 font-medium">
+                “applications that feel complete.”</span
+              >
+            </p>
+
+            <p>
+              What I enjoy most is building systems that have clear architecture
+              behind them. Whether it’s a game, a utility tool, or a data-driven
+              application, I like thinking in terms of structure first — how
+              components interact, how data moves through the system, and how
+              everything stays maintainable as it grows.
+            </p>
+
+            <p class="text-slate-500 text-sm border-t border-white/5 pt-6">
+              This portfolio is also part of that process. It’s not just a
+              showcase, but an ongoing project where I’m actively refining both
+              my development skills and how I present my work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ Featured Projects Section -->
+      <section id="projects" class="section-normal border-t border-white/5">
+        <div class="mb-10">
+          <h2 class="text-white">Featured Projects</h2>
+          <p
+            class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold"
+          >
+            Selected work
+          </p>
+        </div>
+
+        <!-- Grid gevuld met op Java/Fullstack gerichte mockdata conform jouw React intentie -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div class="card-surface p-6 flex flex-col justify-between">
+            <div>
+              <div
+                class="w-full aspect-video bg-slate-900/60 rounded-lg mb-6 flex items-center justify-center text-slate-600 text-xs font-mono"
+              >
+                JAVA_FX_UI
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">
+                JavaFX Desktop App
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Een desktop applicatie met focus op complexe UI componenten,
+                state-management en naadloze data-architectuur.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >Java</span
+                >
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >JavaFX</span
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-sm font-bold text-white border-b border-white/10 w-fit hover:border-white transition"
+              >View Code →</a
+            >
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="card-surface p-6 flex flex-col justify-between">
+            <div>
+              <div
+                class="w-full aspect-video bg-slate-900/60 rounded-lg mb-6 flex items-center justify-center text-slate-600 text-xs font-mono"
+              >
+                WEB_SYSTEM
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Full-Stack Web System
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Een relationeel gedreven webapplicatie gebouwd met een robuuste
+                backend-architectuur en schaalbare endpoints.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >Java</span
+                >
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >Spring Boot</span
+                >
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >SQL</span
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-sm font-bold text-white border-b border-white/10 w-fit hover:border-white transition"
+              >View Code →</a
+            >
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="card-surface p-6 flex flex-col justify-between">
+            <div>
+              <div
+                class="w-full aspect-video bg-slate-900/60 rounded-lg mb-6 flex items-center justify-center text-slate-600 text-xs font-mono"
+              >
+                CONSOLE_CORE
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-white">
+                System Logic Module
+              </h3>
+              <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                Consolesysteem-experimenten gefocust op pure OOP-structuren,
+                datastromen en algoritme-optimalisatie.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >Java</span
+                >
+                <span
+                  class="text-[10px] px-2 py-1 bg-white/5 border border-white/10 rounded uppercase font-bold text-slate-400"
+                  >Algorithms</span
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-sm font-bold text-white border-b border-white/10 w-fit hover:border-white transition"
+              >View Code →</a
+            >
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="text-slate-400 hover:text-white font-bold transition text-xs tracking-wider uppercase"
+          >
+            View All Projects →
+          </a>
+        </div>
+      </section>
+
+      <!-- ⑤ Skills Section (Hersteld en gestileerd in de mooie Pill-vorm) -->
+      <section id="skills" class="section-normal border-t border-white/5">
+        <div class="mb-10">
+          <h2 class="text-white">Skills</h2>
+          <p
+            class="text-slate-500 text-sm mt-1 uppercase tracking-widest font-semibold"
+          >
+            Technologies & tools
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Groep 1 -->
+          <div>
+            <h4
+              class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold mb-6"
+            >
+              Languages
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Java</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >SQL</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >HTML/CSS</span
+              >
+            </div>
+          </div>
+          <!-- Groep 2 -->
+          <div>
+            <h4
+              class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold mb-6"
+            >
+              Frameworks & UI
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >JavaFX</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Spring Boot</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >React</span
+              >
+            </div>
+          </div>
+          <!-- Groep 3 -->
+          <div>
+            <h4
+              class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold mb-6"
+            >
+              Tools & Architecture
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Git / GitHub</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Maven</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >IntelliJ IDEA</span
+              >
+              <span
+                class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300"
+                >Docker</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑥ Contact Section (Volledig afgemaakt op basis van jouw React code) -->
+      <section
+        id="contact"
+        class="section-normal border-t border-white/5 mb-12"
+      >
+        <div class="space-y-6 text-center max-w-2xl mx-auto py-8">
+          <div class="space-y-2">
+            <h2 class="text-white">Contact</h2>
+            <p
+              class="text-sm uppercase tracking-[0.2em] text-slate-500 font-semibold"
+            >
+              Let’s build something together
+            </p>
+          </div>
+
+          <p class="body-text mx-auto">
+            If you’re interested in working together or just want to connect,
+            feel free to reach out.
+          </p>
+
+          <div class="pt-4">
+            <a
+              href="mailto:jouwemail@domein.com"
+              class="inline-block bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition text-sm"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-8 border-t border-white/5 text-center text-xs text-slate-600"
+    >
+      &copy; 2026 Portfolio Wireframe. Geoptimaliseerd met Slate en strikte
+      hiërarchie.
+    </footer>
+  </body>
+</html>

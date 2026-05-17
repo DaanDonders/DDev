@@ -53,7 +53,7 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <Section id="skills">
+    <Section id="skills" importance="minimal">
       <div className="space-y-12">
         <div className="space-y-3">
           <Heading level="h2">Skills</Heading>

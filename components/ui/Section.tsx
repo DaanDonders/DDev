@@ -5,25 +5,27 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
-  spacing?: "normal" | "hero";
+  importance: "hero" | "primary" | "secondary" | "minimal";
 }
 
-const spacingStyles = {
-  normal: "py-24",
-  hero: "min-h-screen py-32 flex items-center",
+const importanceStyles = {
+  hero: "min-h-screen flex items-center py-0",
+  primary: "py-32",
+  secondary: "py-24",
+  minimal: "py-16 opacity-95",
 };
 
 export default function Section({
   children,
   className = "",
   id,
-  spacing = "normal",
+  importance = "secondary",
 }: SectionProps) {
   return (
     <section
       id={id}
       className={`
-                ${spacingStyles[spacing]}
+                ${importanceStyles[importance]}
                 scroll-mt-24
                 ${className}
             `}

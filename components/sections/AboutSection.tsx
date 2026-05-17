@@ -3,7 +3,7 @@ import Heading from "../ui/Heading";
 
 export default function AboutSection() {
   return (
-    <Section id="about">
+    <Section id="about" importance="secondary">
       <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
         <div className="space-y-3">
           <Heading level="h2">About Me</Heading>
