@@ -5,7 +5,7 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
-  importance: "hero" | "primary" | "secondary" | "minimal";
+  importance?: "hero" | "primary" | "secondary" | "minimal";
 }
 
 const importanceStyles = {
